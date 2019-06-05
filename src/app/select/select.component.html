@@ -1,0 +1,15 @@
+<!-- <button (click)="onClick('all')">All</button>
+<button (click)="onClick('business')">Business</button>
+<button (click)="onClick('travel')">Travel</button>
+ -->
+
+ <div>
+   <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+   	  <mat-button-toggle (click)="onClick('all')">All</mat-button-toggle>
+   	  <mat-button-toggle (click)="onClick('travel')">Travel</mat-button-toggle>
+   	  <mat-button-toggle (click)="onClick('lifestyle')">Lifestyle</mat-button-toggle>
+   	  <mat-button-toggle (click)="onClick('business')">Business</mat-button-toggle>
+   	  <mat-button-toggle (click)="onClick('food')">Food</mat-button-toggle>
+   	  <mat-button-toggle (click)="onClick('work')">Work</mat-button-toggle>
+   </mat-button-toggle-group>
+ </div>

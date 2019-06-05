@@ -1,0 +1,41 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+.title {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    color: white;
+    font-size: 40px;
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+.comments {
+
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: white;
+    font-size: 20px;
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+.text {
+	position: absolute;
+    top: 60%;
+    left: 5%;
+    color: white;
+    font-size: 20px;
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+.category {
+	position: absolute;
+    top: 80%;
+    left: 5%;
+    color: white;
+    font-size: 15px;	
+    /*font-family: 'Roboto', sans-serif;*/
+
+}

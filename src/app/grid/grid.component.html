@@ -1,0 +1,13 @@
+<div>
+	
+<mat-grid-list cols="2" rowHeight="2:1" *ngIf="posts$ | async as posts">
+  <mat-grid-tile *ngFor="let post of posts">
+  	<img [src] = "post.image | safeURL" />
+  	<label class="title">{{post.title | titlecase}}</label>
+  	<label class="comments">{{post.comments.length}} Comments</label>
+  	<label class="text">{{post.shortDescription | slice:0:200}}...</label>
+  	<label class="category">{{post.category | uppercase}}</label>
+  </mat-grid-tile>
+
+</mat-grid-list>
+</div>
