@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { FormComponent } from '../form/form.component';
+
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
 
-  ngOnInit() {
+  openDialog() {
+  	this.dialog.open(FormComponent);
   }
-
 }

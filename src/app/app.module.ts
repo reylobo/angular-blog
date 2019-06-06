@@ -1,39 +1,3 @@
-// import { BrowserModule } from '@angular/platform-browser';
-// import { NgModule } from '@angular/core';
-
-// import { AppRoutingModule } from './app-routing.module';
-// import { AppComponent } from './app.component';
-
-// import { HttpClientModule } from '@angular/common/http';
-// import { SelectComponent } from './select/select.component';
-// import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-// import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-// import {MatGridListModule} from '@angular/material/grid-list';
-// import {MatButtonToggleModule} from '@angular/material/button-toggle';
-// import { PostService } from './post.service';
-
-
-// @NgModule({
-//   declarations: [
-//     AppComponent,
-//     SelectComponent
-//   ],
-//   imports: [
-//     BrowserModule,
-//     AppRoutingModule,
-//     HttpClientModule,
-//     BrowserAnimationsModule,
-//     MatGridListModule,
-//     MatButtonToggleModule
-//   ],
-//   providers: [PostService],
-//   bootstrap: [AppComponent]
-// })
-// export class AppModule { }
-
-
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -50,7 +14,12 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ModalComponent } from './modal/modal.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { GridComponent } from './grid/grid.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+// CUSTOM PIPES
 import { SafeURLPipe } from './safe-url.pipe';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -59,15 +28,19 @@ import { SafeURLPipe } from './safe-url.pipe';
     SelectComponent,
     ModalComponent,
     GridComponent,
-    SafeURLPipe
+    SafeURLPipe,
+    FormComponent
   ],
+  entryComponents:[FormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonToggleModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule,
+    MatFormFieldModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

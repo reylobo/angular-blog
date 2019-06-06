@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  header = 'Discovering The World';	
   posts$: Observable<Post[]>;
 
   constructor (private _postService: PostService){
