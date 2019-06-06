@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService, Post } from '../post.service';
+import { Observable } from 'rxjs'; 
 
 @Component({
   selector: 'app-form',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  posts$: Observable<Post[]>;
+
+  constructor(private _postService: PostService) { }
+
+  
+
+
+
 
   ngOnInit() {
+  	console.log(this.posts$);
   }
 
 }

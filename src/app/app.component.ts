@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   header = 'Discovering The World';	
-  posts$: Observable<Post[]>;
+  // posts$: Observable<Post[]>;
 
-  constructor (private _postService: PostService){
-  	this.posts$ = this._postService.combinePostsAndCategory$;
-  }
+  // constructor (private _postService: PostService){
+  // 	this.posts$ = this._postService.combinePostsAndCategory$;
+  // }
 }

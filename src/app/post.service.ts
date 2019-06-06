@@ -24,7 +24,7 @@ export interface Post {
 export class PostService {
 
 	private apiURL = 'https://private-c3edb-postsmock.apiary-mock.com/posts';
-
+  
 	posts$: Observable<Post[]>;
 	categorySubject: BehaviorSubject<string> = new BehaviorSubject<string>('all');
 	selectedCategory$: Observable<string> = this.categorySubject.asObservable();
