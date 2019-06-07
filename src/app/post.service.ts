@@ -3,6 +3,8 @@ import { combineLatest, pipe, Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
+import { FormComponent } from './form/form.component';
+
 export interface Post {
 	id: number;
 	title: string;
@@ -36,6 +38,7 @@ export class PostService {
   	 combineLatest(this.posts$, this.selectedCategory$).pipe(
   	 	 map(this.filterPosts.bind(this))
   	 	);
+     //console.log(this.addPost(this.posts$));
   }
 
   filterPosts([posts, category]){
@@ -52,6 +55,10 @@ export class PostService {
 
   getPosts(){
   	this.posts$ = this._http.get<Post[]>(this.apiURL);	
+  }
+
+  addPost(post){
+   this.categorySubject.next(post);
   }
 
 }

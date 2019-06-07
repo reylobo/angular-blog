@@ -21,6 +21,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SafeURLPipe } from './safe-url.pipe';
 import { FormComponent } from './form/form.component';
 
+// FORMS
+import { ReactiveFormsModule } from '@angular/forms';
+import { TestFormComponent } from './test-form/test-form.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { FormComponent } from './form/form.component';
     ModalComponent,
     GridComponent,
     SafeURLPipe,
-    FormComponent
+    FormComponent,
+    TestFormComponent
   ],
   entryComponents:[FormComponent],
   imports: [
